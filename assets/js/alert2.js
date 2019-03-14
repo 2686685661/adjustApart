@@ -26,6 +26,7 @@ $(function(){
  */
 function getCurrentMajorMsg(id) {
 	request('get', 'http://tiaoji.mbahelper.cn:8889/admin/dispen/getCurrentMajorMsg', { "majorName": id }, function(data){
+		
 		$.isArray(data) ? setInfo(data[0]) : setInfo(data);
     });
 }

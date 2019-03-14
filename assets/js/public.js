@@ -16,7 +16,11 @@ function request(type, url, data, callback){
         success  : function(data) {
         	if(data.code == 0){
         		callback(data.result);
-        	} else {
+            }
+            else if(data.code == 3) {
+                window.location.href = 'http://localhost:81/adjustApart/stopDisCollege2019.html'
+            } 
+            else {
         		layer.alert(data.msg);
         	}
         },
@@ -110,3 +114,20 @@ function OnPropChanged (event) {
         }
     }
 }
+
+
+//判断是pc还是mobile
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+       "SymbianOS", "Windows Phone",
+       "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+       if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+       }
+    }
+    return flag;
+ }
