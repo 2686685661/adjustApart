@@ -9,19 +9,26 @@
     <style>
         body {
             margin: 0;
-            height:100%;
+            /* height:100%;
             width:100%;
             overflow: hidden;
-            background-size:cover;
+            background-size:cover; */
             /* background:url()  no-repeat center center; */
             /* background-size:100%  100%; */
             /* background-attachment:fixed; */
+        }
+        .img_back {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-size: cover;
         }
     </style>
 
 
 </head>
 <body id="bodys">
+    <img id="imgstop" class="img_back" src="" alt="停止调剂">
     <script>
             //判断是pc还是mobile
             function IsPC() {
@@ -39,13 +46,18 @@
                 return flag;
             }
             
-            let bodys = document.getElementById('bodys');
+            // let bodys = document.getElementById('bodys');
+            let img = document.getElementById('imgstop')
             if(IsPC()) {
-                bodys.style.backgroundImage = "url('./assets/img/stopdispensing_pc.png')";
+                // bodys.style.backgroundImage = "url('./assets/img/stopdispensing_pc.png')";
+                img.setAttribute("src", "./assets/img/stopdispensing_pc.png");
             }
             else {
-                bodys.style.backgroundImage = "url('./assets/img/stopdispensing_mo.png')";
+                img.setAttribute("src", "./assets/img/stopdispensing_mo.png");
+                // bodys.style.backgroundImage = "url('./assets/img/stopdispensing_mo.png')";
             }
         </script>
+        
+        
 </body>
 </html>
