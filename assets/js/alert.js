@@ -3,9 +3,17 @@ var saveProject = [];//项目数组
 var lock = true;
 
 
+//调制调剂
+var stop_stat = 0;
+
 $(function(){
-    getProvinces();
-    getDisPro();
+    if(stop_stat == 0) {
+        window.location.href = 'http://tiaoji.mbahelper.cn/stopDisCollege2019.html'
+    }
+    else {
+        getProvinces();
+        getDisPro();
+    }
 });
 
 /**
