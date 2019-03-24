@@ -18,7 +18,7 @@ function request(type, url, data, callback){
         		callback(data.result);
             }
             else if(data.code == 3) {
-                window.location.href = 'http://tiaoji.mbahelper.cn/stopDisCollege2019.html'
+                window.location.href = 'http://tiaoji.mbahelper.cn/testStop.html'
             } 
             else {
         		layer.alert(data.msg);

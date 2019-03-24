@@ -8,7 +8,7 @@ var stop_stat = 0;
 
 $(function(){
     if(stop_stat == 0) {
-        window.location.href = 'http://tiaoji.mbahelper.cn/stopDisCollege2019.html'
+        window.location.href = 'http://tiaoji.mbahelper.cn/testStop.html'
     }
     else {
         getProvinces();
